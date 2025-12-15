@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+
+/* #################### */
+/* Global */
+/* #################### */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ############### */
+    /* Color styles */
+    /* ############### */
+    --background: #ffffff;
+    --accent-1: #485c11;
+    --accent-1: #dfecc6;
+    --accent-1: #8e9c78;
+    --accent-1: #000000;
+    --accent-1: #6f6f6f;
+    --accent-1: #929292;
+    --headline: #000000;
+    --paragraph: #6f6f6f;
+    --captions: #485c11;
+    --link: #000000;
+    --on-accent-1: #ffffff;
+    --divider: #e9e9e9;
+
+    /* ############### */
+    /* Text styles */
+    /* ############### */
+    --fs-12: 12px;/*captions*/
+    --fs-14: 14px;/*links*/
+    --fs-15: 15px;/*p*/
+    --fs-18: 18px;/*h6*/
+    --fs-30: 30px;/*h5*/
+    --fs-40: 40px;/*h4*/
+    --fs-60: 60px;/*h3*/
+    --fs-80: 80px;/*h2*/
+    --fs-160: 160px;/*h1*/
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    /* ############### */
+    /* Font family */
+    /* ############### */
+    --Dm-sans: "DM Sans", sans-serif;
+    --Crimson-text: "Crimson Text", serif;
+}
