@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* #################### */
 /* Global */
 /* #################### */
-
 *{
     margin: 0;
     padding: 0;
@@ -13,42 +12,286 @@
 }
 
 :root{
+
     /* ############### */
     /* Color styles */
     /* ############### */
     --background: #ffffff;
     --accent-1: #485c11;
-    --accent-1: #dfecc6;
-    --accent-1: #8e9c78;
-    --accent-1: #000000;
-    --accent-1: #6f6f6f;
-    --accent-1: #929292;
+    --accent-2: #dfecc6;
+    --accent-3: #8e9c78;
+    --accent-4: #000000;
+    --accent-5: #6f6f6f;
+    --accent-6: #929292;
     --headline: #000000;
     --paragraph: #6f6f6f;
     --captions: #485c11;
     --link: #000000;
     --on-accent-1: #ffffff;
     --divider: #e9e9e9;
+    --mid-green: #8E9C78;
 
     /* ############### */
     /* Text styles */
     /* ############### */
-    --fs-12: 12px;/*captions*/
-    --fs-14: 14px;/*links*/
+    --fs-12: 10.5px;/*caption*/
+    --fs-14: 14px;/*a*/
     --fs-15: 15px;/*p*/
     --fs-18: 18px;/*h6*/
     --fs-30: 30px;/*h5*/
-    --fs-40: 40px;/*h4*/
-    --fs-60: 60px;/*h3*/
-    --fs-80: 80px;/*h2*/
-    --fs-160: 160px;/*h1*/
+    --fs-40: 32px;/*h4*/
+    --fs-60: 50px;/*h3*/
+    --fs-80: 64px;/*h2*/
+    --fs-160: 76px;/*h1*/
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-bold: 700;
+
+    /* ############### */
+    /* Letter spacing */
+    /* ############### */
+    --spacing-0-5: -0.5%;
+    --spacing-1: -1%;
+    --spacing-2-5: -2.5%;
+    --spacing-3: -3%;
+    --spacing-4: -4%;
+    --spacing-4-25: -4.25%;
+    --spacing-4-5: -4.5%;
+    --spacing-5: -5%;
+    --spacing-8: -8%;
+
+    /* ############### */
+    /* Line height */
+    /* ############### */
+    --line-height-80: 80%;
+    --line-height-85: 85%;
+    --line-height-90: 90%;
+    --line-height-95: 95%;
+    --line-height-100: 100%;
+    --line-height-105: 105%;
+    --line-height-110: 100%;
+    --line-height-120: 120%;
+    --line-height-140: 140%;
+
+    /* ############### */
+    /* Border */
+    /* ############### */
+    --divider-1: #E9E9E9;
 
     /* ############### */
     /* Font family */
     /* ############### */
     --Dm-sans: "DM Sans", sans-serif;
     --Crimson-text: "Crimson Text", serif;
+    --Roboto-mono: "Roboto Mono", monospace;
+}
+
+
+/* #################### */
+/* Body */
+/* #################### */
+body{
+    background-color: var(--background);
+    font-family: var(--Dm-sans);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    caption{
+        font-family: var(--Roboto-mono);
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-12);
+        letter-spacing: var(--spacing-3);
+        line-height: var(--line-height-140);
+        color: var(--captions);
+    }
+    h3{
+        font-family: var(--Crimson-text);
+        font-size: var(--fs-60);
+        font-weight: var(--fw-regular);
+        letter-spacing: var(--spacing-3);
+        line-height: var(--line-height-95);
+    }
+    h6{
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-15);
+        letter-spacing: var(--spacing-0-5);
+        line-height: var(--line-height-140);
+    }
+    p{
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-15);
+        line-height: var(--line-height-140);
+        letter-spacing: var(--spacing-0-5);
+        color: var(--paragraph);
+    }
+    a{
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-14);
+        line-height: var(--line-height-140);
+        letter-spacing: var(--spacing-2-5);
+    }
+    button{
+        padding: 14px 22px;
+        border: none;
+        background-color: var(--accent-2);
+        color: var(--link);
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-14);
+        line-height: var(--line-height-140);
+        letter-spacing: var(--spacing-2-5);
+        border-radius: 1000px;
+        cursor: pointer;
+    }
+}
+
+
+/* #################### */
+/* Nav */
+/* #################### */
+nav{
+    h4{
+        display: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    .nav_mobile{
+        height: 78px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 5%);
+        img{
+            width: 18px;
+            height: 12px;
+        }
+    }
+    .nav_items{
+        display: none;
+    }
+
+    button{
+        display: none;
+    }
+}
+
+header{
+    margin-top: 42px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h1{
+        font-family: var(--Crimson-text);
+        font-size: 76px;
+        font-weight: var(--fw-regular);
+        text-align: center;
+        letter-spacing: var(--spacing-4-5);
+        line-height: var(--line-height-90);
+        margin: 42px 0 120px 0;
+    }
+    .hero_image{
+        display: none;
+    }
+    .hero_image_mobile{
+        height: 410.91px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        img{
+            width: 270px;
+            height: 541.82px;
+            top: -57px;
+            position: absolute;
+        }
+        .div_bot{
+            background-color: var(--mid-green);
+            border-radius: 30px;
+            width: 100%;
+            height: 362px;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+main{
+    padding: 0 16px 120px 16px;
+    .logo_cloud{
+        padding: 50px 0;
+        h6{
+            color: var(--paragraph);
+        }
+        .logo_row{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 40px;
+            margin-top: 30px;
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 81.82px;
+            }
+        }
+    }
+    .benefits_section{
+        padding: 0 16px 100px 16px;
+        .headline_and_icons{
+            padding: 80px 0 60px 0;
+            .text{
+                padding-right: 20px;
+                margin-bottom: 50px;
+                caption{
+                    color: var(--accent-1);
+                }
+                h3{
+                    margin: 30px 0;
+                }
+            }
+            .icons_module{
+                padding: 40px 0 60px 0;
+                .icon_lockup{
+                    padding: 40px 0;
+                    border-top: 1px solid var(--divider-1);
+                    img{
+                        width: 24px;
+                        height: 24px;
+                    }
+                    .text1, .text2, .text3, .text4{
+                        padding-right: 20px;
+                        h6{
+                            margin: 20px 0;
+                            color: var(--headline);
+                        }
+                        p{
+                            color: var(--paragraph);
+                        }
+                    }
+                }
+            }
+        }
+        .hero_image{
+            img{
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+                border-radius: 30px;
+            }
+        }
+    }
+    .features_carousel{
+        padding: 60px 16px 80px 16px;
+        .title{
+            p{
+                margin: 40px 0;
+            }
+        }
+    }
 }
