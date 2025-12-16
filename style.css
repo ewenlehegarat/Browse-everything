@@ -140,8 +140,11 @@ body{
         letter-spacing: var(--spacing-2-5);
     }
     button{
-        width: 138px;
-        height: 48px;
+        padding: 14px 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
         border: none;
         background-color: var(--accent-2);
         color: var(--link);
@@ -151,6 +154,28 @@ body{
         letter-spacing: var(--spacing-2-5);
         border-radius: 50px;
         cursor: pointer;
+        transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        .arrow{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 7px;
+            height: 20px;
+            .img{
+                width: 6px;
+                height: 6.01px;
+            }
+        }
+        .arrow{
+            transition: all 700ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+    }
+    button:hover{
+        background-color: var(--accent-3);
+        .arrow{
+            justify-content: end;
+            align-items: start;
+        }
     }
 }
 
@@ -159,6 +184,8 @@ body{
 /* Nav */
 /* #################### */
 nav{
+    position: sticky;
+    height: 78px;
     h4{
         display: none;
     }
@@ -180,13 +207,26 @@ nav{
     }
     .nav_items{
         display: none;
+        gap: 27px;
+        padding: 20px 24px;
+        a{
+            color: var(--link);
+            transition: opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)
+        }
+        a:hover{
+            opacity: 55%;
+        }
     }
-
     button{
+        background-color: var(--accent-1);
+        color: var(--background);
         display: none;
     }
 }
 
+/* #################### */
+/* header */
+/* #################### */
 header{
     margin-top: 42px;
     padding: 0 16px;
@@ -195,7 +235,7 @@ header{
     flex-direction: column;
     h1{
         font-family: var(--Crimson-text);
-        font-size: 76px;
+        font-size: var(--fs-160);
         font-weight: var(--fw-regular);
         text-align: center;
         letter-spacing: var(--spacing-4-5);
@@ -203,33 +243,37 @@ header{
         margin: 42px 0 120px 0;
     }
     .hero_image{
-        display: none;
-    }
-    .hero_image_mobile{
+        position: relative;
         height: 410.91px;
         display: flex;
         justify-content: center;
-        position: relative;
+        align-items: center;
         overflow: hidden;
-        img{
-            width: 270px;
-            height: 541.82px;
-            top: -57px;
-            position: absolute;
-        }
-        .div_bot{
+        .background_hero_image{
             background-color: var(--mid-green);
-            border-radius: 30px;
             width: 100%;
             height: 362px;
-            display: flex;
-            justify-content: center;
+            border-radius: 30px;
+            align-self: flex-end;
+        }
+        .iphone{
             position: absolute;
-            bottom: 0;
+            background-image: url(img/iPhone.png);
+            background-size: 100%;
+            background-position: 50% 10%;
+            width: 270px;
+            height: 411px;
+            img{
+                align-self: flex-end;
+                border: 1px solid var(--accent-6);
+            }
         }
     }
 }
 
+/* #################### */
+/* Main */
+/* #################### */
 main{
     padding: 0 16px;
     .logo_cloud{
@@ -447,6 +491,99 @@ footer{
         .text{
             display: flex;
             justify-content: center;
+        }
+    }
+}
+
+@media screen and (min-width: 800px){
+    :root{
+
+        /* ############### */
+        /* Text styles */
+        /* ############### */
+        --fs-12: 11px;/*caption*/
+        --fs-30: 30px;/*h5*/
+        --fs-40: 40px;/*h4*/
+        --fs-60: 54px;/*h3*/
+        --fs-80: 80px;/*h2*/
+        --fs-160: 140px;/*h1*/
+        --fw-regular: 400;
+        --fw-medium: 500;
+        --fw-bold: 700;
+
+    }
+
+    /* #################### */
+    /* Nav */
+    /* #################### */
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 88px;
+        padding: 0 40px;
+        h4{
+            display: block;
+        }
+        .nav_mobile{
+            display: none;
+        }
+        .nav_items{
+            display: flex;
+        }
+        button{
+            display: flex;
+        }
+    }
+
+    /* #################### */
+    /* header */
+    /* #################### */
+    header{
+        margin-top: 42px;
+        padding: 0 16px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h1{
+            font-family: var(--Crimson-text);
+            font-size: var(--fs-160);
+            font-weight: var(--fw-regular);
+            text-align: center;
+            letter-spacing: var(--spacing-4-5);
+            line-height: var(--line-height-90);
+            margin: 42px 0 120px 0;
+        }
+        .hero_image{
+            position: relative;
+            height: 422px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 0 21.5px;
+            .background_hero_image{
+                background-color: var(--mid-green);
+                width: 100%;
+                height: 362px;
+                border-radius: 30px;
+                align-self: flex-end;
+            }
+            .iphone{
+                background-color: var(--accent-4);
+                position: absolute;
+                background-image: url(img/Ipad\ _tablet.png);
+                background-repeat: no-repeat;
+                background-position: 50% 13.8px;
+                background-size: 645.76px 453.1px;
+                width: 90%;
+                height: 481px;
+                border-radius: 17.9px 17.9px 0 0;
+                bottom: -60px;
+                img{
+                    align-self: flex-end;
+                }
+            }
         }
     }
 }
