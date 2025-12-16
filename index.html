@@ -15,13 +15,13 @@
     <!-- Navigation -->
     <!-- ################## -->
     <nav>
-        <h4>Area</h4>
         <div class="navigation_mobile">
             <div class="nav_top">
-                <h3>Area</h3>
-                <div class="menu_icon">
-                    <img src="img/Menu.png" alt="image menu">
-                </div>
+                <h5>Area</h5>
+                <a href="#" class="menu_icon">
+                    <img src="img/Menu.png" alt="image menu" class="icon_menu">
+                    <img src="img/Close_icon.png" alt="close icon" class="icon_close">
+                </a>
             </div>
             <div class="dropdown_content">
                 <div class="menu_items">
@@ -46,11 +46,22 @@
                 </button>
             </div>
         </div>
-        <div class="nav_items">
-            <a href="#">Benefits</a>
-            <a href="#">Specifications</a>
-            <a href="#">How-to</a>
-            <a href="#">Contact Us</a>
+        <div class="navigation_pc">
+            <div class="nav_items">
+                <a href="#">Benefits</a>
+                <a href="#">Specifications</a>
+                <a href="#">How-to</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="navigation">
+                <h5>Area</h5>
+                <button class="button_linkout">
+                    <a href="#">Learn More</a>
+                    <div class="arrow">
+                        <img src="img/Arrow.png" alt="icon arrow">
+                    </div>
+                </button>
+            </div>
         </div>
     </nav>
     
@@ -102,28 +113,28 @@
                 <div class="icons_module">
                     <div class="icon_lockup icon_lockup_1">
                         <img src="img/Cable_icon.png" alt="cable icon">
-                        <div class="text1">
+                        <div class="text1 text_lockup">
                             <h6>Amplify Insights</h6>
                             <p>Unlock data-driven decisions with comprehensive analytics, revealing key opportunities for strategic regional growth.</p>
                         </div>
                     </div>
                     <div class="icon_lockup icon_lockup_2">
                         <img src="img/Earth_icon.png" alt="earth icon">
-                        <div class="text2">
+                        <div class="text2 text_lockup">
                             <h6>Control Your Global Presence</h6>
                             <p>Manage and track satellite offices, ensuring consistent performance and streamlined operations everywhere.</p>
                         </div>
                     </div>
                     <div class="icon_lockup icon_lockup_3">
                         <img src="img/Account_icon.png" alt="account icon">
-                        <div class="text3">
+                        <div class="text3 text_lockup">
                             <h6>Remove Language Barriers</h6>
                             <p>Adapt to diverse markets with built-in localization for clear communication and enhanced user experience.</p>
                         </div>
                     </div>
                     <div class="icon_lockup icon_lockup_4">
                         <img src="img/Chart_icon.png" alt="chart icon">
-                        <div class="text4">
+                        <div class="text4 text_lockup">
                             <h6>Visualize Growth</h6>
                             <p>Generate precise, visually compelling reports that illustrate your growth trajectories across all regions.</p>
                         </div>
@@ -262,7 +273,12 @@
         <div class="centered_cta">
             <h3>Connect with us</h3>
             <p>Schedule a quick call to learn how Area can turn your regional data into a powerful advantage.</p>
-            <button>Learn More<img src="img/Arrow.png" alt="image arrow"></button>
+            <button class="button_linkout">
+                <a href="#">Learn More</a>
+                <div class="arrow">
+                    <img src="img/Arrow.png" alt="icon arrow">
+                </div>
+            </button>
         </div>
     </main>
 

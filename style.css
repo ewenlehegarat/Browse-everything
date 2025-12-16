@@ -16,7 +16,7 @@
     /* ############### */
     /* Color styles */
     /* ############### */
-    --background: #ffffff;
+    --background-1: #ffffff;
     --accent-1: #485c11;
     --accent-2: #dfecc6;
     --accent-3: #8e9c78;
@@ -34,7 +34,7 @@
     /* ############### */
     /* Text styles */
     /* ############### */
-    --fs-12: 10.5px;/*caption*/
+    --fs-12: 10.5px;/*span*/
     --fs-14: 14px;/*a*/
     --fs-15: 15px;/*p*/
     --fs-18: 18px;/*h6*/
@@ -105,6 +105,18 @@ body{
         line-height: var(--line-height-140);
         color: var(--captions);
     }
+    h1{
+        font-family: var(--Crimson-text);
+        font-size: var(--fs-160);
+        font-weight: var(--fw-regular);
+        letter-spacing: var(--spacing-4-5);
+        line-height: var(--line-height-85);
+    }
+    h2{
+        font-size: var(--fs-80);
+        line-height: var(--line-height-100);
+        letter-spacing: var(--spacing-4);
+    }
     h3{
         font-family: var(--Crimson-text);
         font-size: var(--fs-60);
@@ -118,6 +130,12 @@ body{
         font-size: var(--fs-40);
         line-height: var(--line-height-110);
         letter-spacing: var(--spacing-4);
+    }
+    h5{
+        font-weight: var(--fw-medium);
+        font-size: var(--fs-30);
+        line-height: var(--line-height-120);
+        letter-spacing: var(--spacing-8);
     }
     h6{
         font-weight: var(--fw-regular);
@@ -140,7 +158,8 @@ body{
         letter-spacing: var(--spacing-2-5);
     }
     button{
-        padding: 14px 22px;
+        width: 138px;
+        height: 48px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -154,7 +173,7 @@ body{
         letter-spacing: var(--spacing-2-5);
         border-radius: 50px;
         cursor: pointer;
-        transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
         .arrow{
             display: flex;
             justify-content: start;
@@ -172,10 +191,23 @@ body{
     }
     button:hover{
         background-color: var(--accent-3);
+        color: var(--on-accent-1);
         .arrow{
             justify-content: end;
             align-items: start;
         }
+    }
+    .button_linkout{
+        padding: 22px 14px;
+        width: 127px;
+        height: 48px;
+        background-color: var(--accent-1);
+        a{
+            color: var(--background-1);
+        }
+    }
+    .button_linkout:hover{
+        background-color: var(--accent-3);
     }
 }
 
@@ -184,42 +216,66 @@ body{
 /* Nav */
 /* #################### */
 nav{
-    position: sticky;
-    height: 78px;
-    h4{
-        display: none;
-    }
-    a{
-        text-decoration: none;
-    }
-    .nav_mobile{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    .navigation_mobile{
+        background-color: var(--background-1);
         height: 78px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        border-radius: 0 0 20px 20px;
         box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 5%);
-        img{
-            width: 18px;
-            height: 12px;
+        .nav_top{
+            background-color: var(--background-1);
+            padding: 20px 20px 50px 20px;
+            display: flex;
+            justify-content: space-between;
+            .menu_icon{
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .icon_menu{
+                    width: 18px;
+                    height: 12px;
+                }
+                .icon_close{
+                    display: none;
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+        .dropdown_content{
+            background-color: var(--background-1);
+            padding: 8px 20px 32px 20px;
+            display: none;
+            flex-direction: column;
+            gap: 50px;
+            .menu_items{
+                div{
+                    padding: 30px 0;
+                    border-top: 1px solid var(--divider-1);
+                    a{
+                        color: var(--link);
+                    }
+                }
+            }
+            .button_linkout{
+                padding: 22px 14px;
+                width: 127px;
+                height: 48px;
+                background-color: var(--accent-1);
+                a{
+                    color: var(--background-1);
+                }
+            }
+            .button_linkout:hover{
+                background-color: var(--accent-3);
+            }
         }
     }
-    .nav_items{
-        display: none;
-        gap: 27px;
-        padding: 20px 24px;
-        a{
-            color: var(--link);
-            transition: opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1)
-        }
-        a:hover{
-            opacity: 55%;
-        }
-    }
-    button{
-        background-color: var(--accent-1);
-        color: var(--background);
+    .navigation_pc{
         display: none;
     }
 }
@@ -228,18 +284,12 @@ nav{
 /* header */
 /* #################### */
 header{
-    margin-top: 42px;
-    padding: 0 16px;
+    padding: 120px 16px 0 16px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     h1{
-        font-family: var(--Crimson-text);
-        font-size: var(--fs-160);
-        font-weight: var(--fw-regular);
         text-align: center;
-        letter-spacing: var(--spacing-4-5);
-        line-height: var(--line-height-90);
         margin: 42px 0 120px 0;
     }
     .hero_image{
@@ -275,9 +325,12 @@ header{
 /* Main */
 /* #################### */
 main{
-    padding: 0 16px;
     .logo_cloud{
-        padding: 50px 0;
+        padding: 50px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
         h6{
             color: var(--paragraph);
         }
@@ -287,7 +340,6 @@ main{
             justify-content: center;
             align-items: center;
             gap: 20px 40px;
-            margin-top: 30px;
             div{
                 display: flex;
                 justify-content: center;
@@ -300,10 +352,14 @@ main{
     .benefits_section{
         padding: 0 16px 100px 16px;
         .headline_and_icons{
-            margin-top: 80px;
+            padding: 80px 0 60px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
             .text{
                 padding-right: 20px;
-                margin-bottom: 50px;
                 caption{
                     color: var(--accent-1);
                 }
@@ -312,23 +368,47 @@ main{
                 }
             }
             .icons_module{
-                padding: 40px 0 60px 0;
+                padding-top: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
                 .icon_lockup{
-                    padding: 40px 0;
+                    padding: 40px 20px 40px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 24px;
                     border-top: 1px solid var(--divider-1);
                     img{
                         width: 24px;
                         height: 24px;
                     }
-                    .text1, .text2, .text3, .text4{
-                        padding-right: 20px;
+                    .textlockup{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
                         h6{
-                            margin: 20px 0;
                             color: var(--headline);
                         }
                         p{
                             color: var(--paragraph);
                         }
+                    }
+                    .text1{
+                        padding: 40px 20px 40px 0;
+                        gap: 24px;
+                    }
+                    .text2{
+                        padding: 40px 20px 40px 0;
+                        gap: 20px;
+                    }
+                    .text3, .text4{
+                        padding: 40px 40px 40px 0;
+                        gap: 24px;
                     }
                 }
             }
@@ -458,9 +538,6 @@ main{
             width: 100%;
             background-color: var(--accent-1);
             color: var(--background);
-            display: flex;
-            justify-content: center;
-            align-items: center;
             gap: 2px;
         }
     }
@@ -497,7 +574,6 @@ footer{
 
 @media screen and (min-width: 800px){
     :root{
-
         /* ############### */
         /* Text styles */
         /* ############### */
@@ -507,32 +583,64 @@ footer{
         --fs-60: 54px;/*h3*/
         --fs-80: 80px;/*h2*/
         --fs-160: 140px;/*h1*/
-        --fw-regular: 400;
-        --fw-medium: 500;
-        --fw-bold: 700;
+    }
 
+    /* #################### */
+    /* Body */
+    /* #################### */
+    body{
+        padding: 0 40px 20px 40px;
+        span{
+            letter-spacing: var(--spacing-1);
+            line-height: var(--line-height-140);
+        }
+        h1{
+            letter-spacing: var(--spacing-5);
+            line-height: var(--line-height-80); 
+        }
+        h3{
+            letter-spacing: var(--spacing-3);
+            line-height: var(--line-height-90);
+        }
     }
 
     /* #################### */
     /* Nav */
     /* #################### */
     nav{
-        display: flex;
-        justify-content: space-between;
+        position: relative;
         align-items: center;
-        height: 88px;
-        padding: 0 40px;
-        h4{
-            display: block;
-        }
-        .nav_mobile{
+        .navigation_mobile{
             display: none;
         }
-        .nav_items{
-            display: flex;
-        }
-        button{
-            display: flex;
+        .navigation_pc{
+            display: block;
+            height: 148px;
+            padding: 20px 0 80px 0;
+            .nav_items{
+                padding: 20px 24px;
+                position: fixed;
+                display: flex;
+                left: 49%;
+                transform: translateX(-51%);
+                align-items: center;
+                gap: 27px;
+                background-color: #ffffff40;
+                border-radius: 100px;
+                backdrop-filter: blur(30px);
+                a{
+                    color: var(--link);
+                    transition: opacity 300ms ease-out;
+                }
+                a:hover{
+                    opacity: 55%;
+                }
+            }
+            .navigation{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
     }
 
@@ -584,6 +692,39 @@ footer{
                     align-self: flex-end;
                 }
             }
+        }
+    }
+
+    main{
+        .benefits_section{
+            .headline_and_icons{
+                .icons_module{
+                    .iconlockup{
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px){
+    :root{
+        /* ############### */
+        /* Text styles */
+        /* ############### */
+        --fs-12: 12px;/*caption*/
+        --fs-30: 30px;/*h5*/
+        --fs-60: 60px;/*h3*/
+        --fs-160: 160px;/*h1*/
+    }
+
+    /* #################### */
+    /* Body */
+    /* #################### */
+    body{
+        h1{
+            line-height: var(--line-height-85); 
         }
     }
 }
