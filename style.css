@@ -632,11 +632,11 @@ main{
         }
         .trois_up{
             display: flex;
-            align-items: center;
             gap: 20px;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             section{
+                min-width: 240px;
                 padding: 60px 30px 20px 0;
                 display: flex;
                 justify-content: center;
