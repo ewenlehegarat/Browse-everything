@@ -467,6 +467,7 @@ main{
         padding: 0 32px 80px 32px;
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
         .text{
             width: 100%;
@@ -495,6 +496,7 @@ main{
         }
         .features_carousel_v1{
             width: 100%;
+            max-width: 590px;
             img{
                 width: 100%;
                 object-fit: cover ;
@@ -598,6 +600,7 @@ main{
         gap: 40px;
         img{
             width: 100%;
+            max-width: 590px;
             border-radius: 30px;
         }
         .quote{
@@ -664,6 +667,7 @@ main{
                 height: 600px;
                 border-radius: 30px;
                 object-fit: cover;
+                object-position: 50% 50%;
             }
         }
     }
@@ -686,10 +690,12 @@ main{
 }
 
 footer{
+    width: 100%;
     padding: 40px 16px 20px 16px;
     display: flex;
     justify-content: center;    
     flex-direction: column;
+    align-self: flex-start;
     gap: 80px;
     border-top: 1px solid var(--divider-1);
     .links{
@@ -707,6 +713,7 @@ footer{
     .credits{
         display: flex;
         align-items: flex-end;
+        justify-content: space-between;
         gap: 40px;
         .text{
             display: flex;
@@ -733,6 +740,10 @@ footer{
     /* #################### */
     body{
         padding: 0 40px 20px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         span{
             letter-spacing: var(--spacing-1);
             line-height: var(--line-height-140);
@@ -792,6 +803,7 @@ footer{
     /* header */
     /* #################### */
     header{
+        max-width: 1500px;
         padding: 0 16px;
         display: flex;
         justify-content: center;
@@ -956,6 +968,12 @@ footer{
     /* #################### */
     footer{
         padding: 40px 0 20px 0;
+        .links{
+            .nav_items{
+                display: flex;
+                flex-direction: row;
+            }
+        }
     }
 }
 
@@ -1055,11 +1073,12 @@ footer{
                 padding: 0;
             }
         }
-
         .testimonial_section{
+            max-width: 1200px;
             gap: 20px;
             flex-direction: row;
             .quote{
+                padding-left: 50px;
                 width: 100%;
                 border: none;
                 padding: 0 0 0 50px;
