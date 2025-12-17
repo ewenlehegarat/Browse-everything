@@ -173,20 +173,18 @@ body{
         letter-spacing: var(--spacing-2-5);
         border-radius: 50px;
         cursor: pointer;
-        transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+        transition: background-color 300ms ease-in-out, color 300ms ease-in-out, transform 300ms ease-in-out;
         .arrow{
             display: flex;
             justify-content: start;
             align-items: center;
             width: 7px;
             height: 20px;
+            transition: transform 300ms ease-in-out;
             img{
                 width: 6px;
                 height: 6.01px;
             }
-        }
-        .arrow{
-            transition: transform 700ms cubic-bezier(0.4, 0.0, 0.2, 1);
         }
     }
     button:hover{
