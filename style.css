@@ -507,11 +507,11 @@ main{
             }
         }
         .table{
+            width: 100%;
             padding-left: 8px;
             border-radius: 20px;
-            display: none;
-            justify-content: center;
-            align-items: center;
+            display: flex;
+            overflow-x: hidden;
             .column1{
                 background-color: var(--background-1);
                 border: 1px solid var(--divider-1);
@@ -523,13 +523,16 @@ main{
                 }
             }
             .column{
+                width: 100%;
                 border-radius: 20px;
                 .table_item1{
-                    padding: 40px 30px;
+                    width: 100%;
+                    padding: 32px 30px;
                     border-bottom: 1px solid var(--accent-6);
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    gap: 8px;
                     p{
                         font-size: 25.71px;
                         line-height: var(--line-height-120);
@@ -538,14 +541,17 @@ main{
                     }
                 }
                 .table_item{
-                    padding: 32px 30px;
+                    width: 100%;
+                    padding: 40px 30px;
                     border-bottom: 0.5px solid var(--divider-1);
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     gap: 8px;
-                    p{
-                        color: var(--headline);
+                    h6{
+                        span{
+                            color: var(--headline);
+                        }
                     }
                     .check_icon{
                         width: 14px;
@@ -836,6 +842,11 @@ footer{
             padding: 0 0 120px 0;
             gap: -12px;
         }
+        .specifications_table{
+            .table{
+                padding: 2px;
+            }
+        }
         .testimonial_section{
             padding: 0 0 120px 0;
         }
@@ -940,6 +951,91 @@ footer{
                     width: 100%;
                     object-fit: cover ;
                     border-radius: 30px;
+                }
+            }
+        }
+        .specifications_table{
+            padding-bottom: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            .content{
+                width: 100%;
+                padding: 80px 16px;
+                border-top: 1px solid var(--accent-6);
+                .text_content{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 30px;
+                    text-align: center;
+                }
+            }
+            .table{
+                width: 100%;
+                padding-left: 0;
+                border-radius: 20px;
+                display: flex;
+                overflow-x: hidden;
+                .column1{
+                    background-color: var(--background-1);
+                    border: 1px solid var(--divider-1);
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+                    .table_item1{
+                        p{
+                            color: var(--accent-4);
+                        }
+                    }
+                }
+                .column{
+                    width: 100%;
+                    border-radius: 20px;
+                    .table_item1{
+                        width: 100%;
+                        padding: 32px 30px;
+                        border-bottom: 1px solid var(--accent-6);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 8px;
+                        p{
+                            font-size: 25.71px;
+                            line-height: var(--line-height-120);
+                            letter-spacing: var(--spacing-8);
+                            font-weight: var(--fw-medium);
+                        }
+                    }
+                    .table_item{
+                        padding: 40px 30px;
+                        border-bottom: 0.5px solid var(--divider-1);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 8px;
+                        h6{
+                            span{
+                                color: var(--headline);
+                            }
+                        }
+                        .check_icon{
+                            width: 14px;
+                            height: 14px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .img_check{
+                                width: 10.21px;
+                                height: 7.82px;
+                            }
+                            .img_close{
+                                width: 8.17px;
+                                height: 8.17px;
+                            }
+                        }
+                    }
                 }
             }
         }
