@@ -357,6 +357,7 @@ main{
         flex-direction: column;
         padding: 0 16px 100px 16px;
         .headline_and_icons{
+            width: 100%;
             padding: 80px 0 60px 0;
             display: flex;
             justify-content: center;
@@ -496,6 +497,7 @@ main{
         flex-direction: column;
         gap: 20px;
         .content{
+            width: 100%;
             padding: 80px 16px;
             border-top: 1px solid var(--accent-6);
             .text_content{
@@ -613,6 +615,8 @@ main{
             justify-content: center;
             align-items: center;
             gap: 20px;
+            overflow-x: hidden;
+            min-width: 343px;
             section{
                 padding: 60px 30px 20px 0;
                 display: flex;
@@ -916,6 +920,7 @@ footer{
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
+                border: none;
                 .title{
                     p{
                         margin: 40px 0;
