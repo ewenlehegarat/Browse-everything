@@ -180,21 +180,20 @@ body{
             align-items: center;
             width: 7px;
             height: 20px;
-            .img{
+            img{
                 width: 6px;
                 height: 6.01px;
             }
         }
         .arrow{
-            transition: all 700ms cubic-bezier(0.4, 0.0, 0.2, 1);
+            transition: transform 700ms cubic-bezier(0.4, 0.0, 0.2, 1);
         }
     }
     button:hover{
         background-color: var(--accent-3);
         color: var(--on-accent-1);
         .arrow{
-            justify-content: end;
-            align-items: start;
+            transform: translate(1px, -7px);
         }
     }
     .button_linkout{
