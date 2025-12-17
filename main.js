@@ -11,6 +11,23 @@ const aSpecification = document.querySelectorAll('.specification')
 const aHowto = document.querySelectorAll('.how_to')
 const aContactUs = document.querySelectorAll('.contact_us')
 
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // Replay OFF
+      }
+    });
+  },
+  {
+    threshold: 0.2
+  }
+);
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+
 function closeMenu() {
     buttonClose.style.display = 'none';
     buttonOpen.style.display = 'block';
