@@ -26,16 +26,16 @@
             <div class="dropdown_content">
                 <div class="menu_items">
                     <div class="list_item1">
-                        <a href="#">Benefits</a>
+                        <a href="#" class="benefits">Benefits</a>
                     </div>
                     <div class="list_item2">
-                        <a href="#">Specifications</a>
+                        <a href="#" class="specification">Specifications</a>
                     </div>
                     <div class="list_item3">
-                        <a href="#">How-to</a>
+                        <a href="#" class="how_to">How-to</a>
                     </div>
                     <div class="list_item4">
-                        <a href="#">Contact Us</a>
+                        <a href="#" class="contact_us">Contact Us</a>
                     </div>
                 </div>
                 <button class="button_linkout">
@@ -48,10 +48,10 @@
         </div>
         <div class="navigation_pc">
             <div class="nav_items">
-                <a href="#">Benefits</a>
-                <a href="#">Specifications</a>
-                <a href="#">How-to</a>
-                <a href="#">Contact Us</a>
+                <a href="#" class="benefits">Benefits</a>
+                <a href="#" class="specification">Specifications</a>
+                <a href="#" class="how_to">How-to</a>
+                <a href="#" class="contact_us">Contact Us</a>
             </div>
             <div class="navigation">
                 <h5>Area</h5>
@@ -112,28 +112,36 @@
                 </div>
                 <div class="icons_module">
                     <div class="icon_lockup icon_lockup_1">
-                        <img src="img/Cable_icon.png" alt="cable icon">
+                        <div class="cable_icon icon">
+                            <img src="img/Cable_icon.png" alt="cable icon" class="cable_img">
+                        </div>
                         <div class="text1 text_lockup">
                             <h6>Amplify Insights</h6>
                             <p>Unlock data-driven decisions with comprehensive analytics, revealing key opportunities for strategic regional growth.</p>
                         </div>
                     </div>
                     <div class="icon_lockup icon_lockup_2">
-                        <img src="img/Earth_icon.png" alt="earth icon">
+                        <div class="earth_icon icon">
+                            <img src="img/Earth_icon.png" alt="earth icon" class="earth_img">
+                        </div>
                         <div class="text2 text_lockup">
                             <h6>Control Your Global Presence</h6>
                             <p>Manage and track satellite offices, ensuring consistent performance and streamlined operations everywhere.</p>
                         </div>
                     </div>
                     <div class="icon_lockup icon_lockup_3">
-                        <img src="img/Account_icon.png" alt="account icon">
+                        <div class="account_icon icon">
+                            <img src="img/Account_icon.png" alt="account icon" class="account_img">
+                        </div>
                         <div class="text3 text_lockup">
                             <h6>Remove Language Barriers</h6>
                             <p>Adapt to diverse markets with built-in localization for clear communication and enhanced user experience.</p>
                         </div>
                     </div>
                     <div class="icon_lockup icon_lockup_4">
-                        <img src="img/Chart_icon.png" alt="chart icon">
+                        <div class="chart_icon icon">
+                            <img src="img/Chart_icon.png" alt="chart icon" class="chart_img">
+                        </div>
                         <div class="text4 text_lockup">
                             <h6>Visualize Growth</h6>
                             <p>Generate precise, visually compelling reports that illustrate your growth trajectories across all regions.</p>
@@ -141,9 +149,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero_image">
-                <img src="img/Image_1.png" alt="image 1">
-            </div>
+            <img src="img/Image_1.png" alt="image 1" class="hero_image">
         </div>
         <div class="features_carousel">
             <div class="text">
@@ -184,47 +190,131 @@
                     <button>Discover More</button>
                 </div>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col">Area</th>
-                        <th scope="col">Websurge</th>
-                        <th scope="col">Hyperview</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="img/Check_icon.png" alt="Check_icon">Ultra-fast browsing</td>
-                        <td><img src="img/Check_icon.png" alt="Check_icon">Fast browsing</td>
-                        <td><img src="img/Check_icon.png" alt="Check_icon">Moderate speeds</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/Check_icon.png" alt="check icon">Advanced AI insights</td>
-                        <td><img src="img/Check_icon.png" alt="Check_icon">Basic AI recommendations</td>
-                        <td><img src="img/Close_icon.png" alt="close icon">No AI assistance</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/Check_icon.png" alt="check icon">Seamless integration</td>
-                        <td><img src="img/Check_icon.png" alt="check icon">Restricts customization</td>
-                        <td><img src="img/Close_icon.png" alt="close icon">Steep learning curve</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/Check_icon.png" alt="check icon">Advanced AI insights</td>
-                        <td><img src="img/Close_icon.png" alt="close icon">Basic AI insights</td>
-                        <td><img src="img/Close_icon.png" alt="close icon">No AI assistance</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/Check_icon.png" alt="check icon">Ultra-fast browsing</td>
-                        <td><img src="img/Check_icon.png" alt="check icon">Fast browsing</td>
-                        <td><img src="img/Close_icon.png" alt="close icon">Moderate speeds</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/Check_icon.png" alt="check icon">Full UTF-8 support</td>
-                        <td><img src="img/Close_icon.png" alt="close icon">Potential display errors</td>
-                        <td><img src="img/Close_icon.png" alt="close icon">Partial UTF-8 support</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table">
+               <div class="column column1">
+                    <div class="table_item1">
+                        <p>Area</p>
+                    </div>
+                    <div class="table_item table_item2">
+                        <div class="check_icon">
+                            <img src="img/Check_img.png" alt="check icon" class="img_check">
+                        </div>
+                        <h6><span>Ultra-fast browsing</span></h6>
+                    </div>
+                    <div class="table_item table_item3">
+                        <div class="check_icon">
+                            <img src="img/Check_img.png" alt="check icon" class="img_check">
+                        </div>
+                        <h6><span>Advanced AI insights</span></h6>
+                    </div>
+                    <div class="table_item table_item4">
+                        <div class="check_icon">
+                            <img src="img/Check_img.png" alt="check icon" class="img_check">
+                        </div>
+                        <h6><span>Seamless integration</span></h6>
+                    </div>
+                    <div class="table_item table_item5">
+                        <div class="check_icon">
+                            <img src="img/Check_img.png" alt="check icon" class="img_check">
+                        </div>
+                        <h6><span>Advanced AI insights</span></h6>
+                    </div>
+                    <div class="table_item table_item6">
+                        <div class="check_icon">
+                            <img src="img/Check_img.png" alt="check icon" class="img_check">
+                        </div>
+                        <h6><span>Ultra-fast browsing</span></h6>
+                    </div>
+                    <div class="table_item table_item7">
+                        <div class="check_icon">
+                            <img src="img/Check_img.png" alt="check icon" class="img_check">
+                        </div>
+                        <h6><span>Full UTF-8 support</span></h6>
+                    </div>
+               </div>
+               <div class="column column2">
+                    <div class="table_item1">
+                        <p>WebSurge</p>
+                    </div>
+                    <div class="table_item table_item2">
+                        <div class="check_icon">
+                            <img src="img/Check_img.png" alt="check icon" class="img_check">
+                        </div>
+                        <h6><span>Fast browsing</span></h6>
+                    </div>
+                    <div class="table_item table_item3">
+                        <div class="check_icon">
+                            <img src="img/Check_img.png" alt="check icon" class="img_check">
+                        </div>
+                        <h6><span>Basic AI recommendations</span></h6>
+                    </div>
+                    <div class="table_item table_item4">
+                        <div class="check_icon">
+                            <img src="img/Check_img.png" alt="check icon" class="img_check">
+                        </div>
+                        <h6><span>Restricts customization</span></h6>
+                    </div>
+                    <div class="table_item table_item5">
+                        <div class="check_icon">
+                            <img src="img/Close_img.png" alt="close icon" class="img_close">
+                        </div>
+                        <h6><span>Basic AI insights</span></h6>
+                    </div>
+                    <div class="table_item table_item6">
+                        <div class="check_icon">
+                            <img src="img/Check_img.png" alt="check icon" class="img_check">
+                        </div>
+                        <h6><span>Fast browsing</span></h6>
+                    </div>
+                    <div class="table_item table_item7">
+                        <div class="check_icon">
+                            <img src="img/Close_img.png" alt="close icon" class="img_close">
+                        </div>
+                        <h6><span>Potential display errors</span></h6>
+                    </div>
+               </div>
+               <div class="column column3">
+                    <div class="table_item1">
+                        <p>HyperView</p>
+                    </div>
+                    <div class="table_item table_item2">
+                        <div class="check_icon">
+                            <img src="img/Close_img.png" alt="close icon" class="img_close">
+                        </div>
+                        <h6><span>Moderate speeds</span></h6>
+                    </div>
+                    <div class="table_item table_item3">
+                        <div class="check_icon">
+                            <img src="img/Close_img.png" alt="close icon" class="img_close">
+                        </div>
+                        <h6><span>No AI assistance</span></h6>
+                    </div>
+                    <div class="table_item table_item4">
+                        <div class="check_icon">
+                            <img src="img/Close_img.png" alt="close icon" class="img_close">
+                        </div>
+                        <h6><span>Steep learning curve</span></h6>
+                    </div>
+                    <div class="table_item table_item5">
+                        <div class="check_icon">
+                            <img src="img/Close_img.png" alt="close icon" class="img_close">
+                        </div>
+                        <h6><span>No AI assistance</span></h6>
+                    </div>
+                    <div class="table_item table_item6">
+                        <div class="check_icon">
+                            <img src="img/Close_img.png" alt="close icon" class="img_close">
+                        </div>
+                        <h6><span>Moderate speeds</span></h6>
+                    </div>
+                    <div class="table_item table_item7">
+                        <div class="check_icon">
+                            <img src="img/Close_img.png" alt="close icon" class="img_close">
+                        </div>
+                        <h6><span>Partial UTF-8 support</span></h6>
+                    </div>
+               </div>
+            </div>
         </div>
         <div class="testimonial_section">
             <img src="img/Image_3.png" alt="image 3">
@@ -241,28 +331,28 @@
                 <h3>Map Your Success</h3>
                 <button>Discover More</button>
             </div>
-            <div class="3_up">
-                <div class="lockup1">
+            <div class="trois_up">
+                <section class="lockup1">
                     <h2>01</h2>
-                    <div class="text1">
+                    <div class="frame text1">
                         <h6>Get Started</h6>
                         <p>With our intuitive setup, you’re up and running in minutes.</p>
                     </div>
-                </div>
-                <div class="lockup2">
+                </section>
+                <section class="lockup2">
                     <h2>02</h2>
-                    <div class="text2">
+                    <div class="frame text2">
                         <h6>Customize and Configure</h6>
                         <p>Adapt Area to your specific requirements and preferences.</p>
                     </div>
-                </div>
-                <div class="lockup3">
+                </section>
+                <section class="lockup3">
                     <h2>03</h2>
-                    <div class="text3">
+                    <div class="frame text3">
                         <h6>Grow Your Business</h6>
                         <p>Make informed decisions to exceed your goals.</p>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
         <div class="hero_image_bottom">

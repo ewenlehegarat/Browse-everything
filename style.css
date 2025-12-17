@@ -223,10 +223,11 @@ nav{
     .navigation_mobile{
         background-color: var(--background-1);
         height: 78px;
-        box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 5%);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+        border-radius: 0 0 20px 20px;
         .nav_top{
             background-color: var(--background-1);
-            padding: 20px 20px 50px 20px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             .menu_icon{
@@ -248,7 +249,7 @@ nav{
         }
         .dropdown_content{
             background-color: var(--background-1);
-            padding: 8px 20px 32px 20px;
+            padding: 20px;
             display: none;
             flex-direction: column;
             gap: 50px;
@@ -288,9 +289,9 @@ header{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    gap: 120px;
     h1{
         text-align: center;
-        margin: 42px 0 120px 0;
     }
     .hero_image{
         position: relative;
@@ -350,21 +351,25 @@ main{
         }
     }
     .benefits_section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         padding: 0 16px 100px 16px;
         .headline_and_icons{
             padding: 80px 0 60px 0;
             display: flex;
             justify-content: center;
-            align-items: center;
             flex-direction: column;
             gap: 50px;
+            border-top: 0.5px solid var(--divider-1);
             .text{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
                 padding-right: 20px;
                 caption{
                     color: var(--accent-1);
-                }
-                h3{
-                    margin: 30px 0;
                 }
             }
             .icons_module{
@@ -372,19 +377,36 @@ main{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                align-items: center;
                 gap: 20px;
                 .icon_lockup{
                     padding: 40px 20px 40px 0;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
                     flex-direction: column;
                     gap: 24px;
                     border-top: 1px solid var(--divider-1);
-                    img{
+                    .icon{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         width: 24px;
                         height: 24px;
+                        .cable_img{
+                            width: 20.39px;
+                            height: 19.02px;
+                        }
+                        .earth_img{
+                            width: 20px;
+                            height: 20px;
+                        }
+                        .account_img{
+                            width: 22.01px;
+                            height: 19px;
+                        }
+                        .chart_img{
+                            width: 22px;
+                            height: 12px;
+                        }
                     }
                     .textlockup{
                         display: flex;
@@ -399,37 +421,48 @@ main{
                         }
                     }
                     .text1{
-                        padding: 40px 20px 40px 0;
+                        display: flex;
+                        flex-direction: column;
                         gap: 24px;
                     }
                     .text2{
-                        padding: 40px 20px 40px 0;
+                        display: flex;
+                        flex-direction: column;
                         gap: 20px;
                     }
                     .text3, .text4{
-                        padding: 40px 40px 40px 0;
+                        display: flex;
+                        flex-direction: column;
                         gap: 24px;
                     }
+                }
+                .icon_lockup_3, .icon_lockup_4{
+                    padding-right: 40px;
                 }
             }
         }
         .hero_image{
-            img{
-                width: 100%;
-                height: 600px;
-                object-fit: cover;
-                border-radius: 30px;
-            }
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            object-position: 50% 50%;
+            border-radius: 30px;
         }
     }
     .features_carousel{
-        padding: 0 16px 80px 16px;
+        padding: 0 32px 80px 32px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         .text{
+            width: 100%;
             padding: 60px 0 80px 0;
             display: flex;
             flex-direction: column;
             gap: 40px;
+            border-top: 1px solid var(--divider-1);
             .title{
+                width: 100%;
                 p{
                     margin: 40px 0;
                 }
@@ -447,6 +480,7 @@ main{
             }
         }
         .features_carousel_v1{
+            width: 100%;
             img{
                 width: 100%;
                 object-fit: cover ;
@@ -463,6 +497,7 @@ main{
         gap: 20px;
         .content{
             padding: 80px 16px;
+            border-top: 1px solid var(--accent-6);
             .text_content{
                 display: flex;
                 justify-content: center;
@@ -470,6 +505,65 @@ main{
                 flex-direction: column;
                 gap: 30px;
                 text-align: center;
+            }
+        }
+        .table{
+            padding-left: 8px;
+            border-radius: 20px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            .column1{
+                background-color: var(--background-1);
+                border: 1px solid var(--divider-1);
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+                .table_item1{
+                    p{
+                        color: var(--accent-4);
+                    }
+                }
+            }
+            .column{
+                border-radius: 20px;
+                .table_item1{
+                    padding: 40px 30px;
+                    border-bottom: 1px solid var(--accent-6);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        font-size: 25.71px;
+                        line-height: var(--line-height-120);
+                        letter-spacing: var(--spacing-8);
+                        font-weight: var(--fw-medium);
+                    }
+                }
+                .table_item{
+                    padding: 32px 30px;
+                    border-bottom: 0.5px solid var(--divider-1);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    p{
+                        color: var(--headline);
+                    }
+                    .check_icon{
+                        width: 14px;
+                        height: 14px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .img_check{
+                            width: 10.21px;
+                            height: 7.82px;
+                        }
+                        .img_close{
+                            width: 8.17px;
+                            height: 8.17px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -490,6 +584,7 @@ main{
             justify-content: center;
             flex-direction: column;
             gap: 50px;
+            border-top: 1px solid var(--divider-1);
             .name{
                 display: flex;
                 align-items: center;
@@ -506,11 +601,34 @@ main{
         justify-content: center;
         flex-direction: column;
         gap: 80px;
+        border-top: 1px solid var(--divider-1);
         .frame_map{
             display: flex;
             justify-content: center;
             flex-direction: column;
             gap: 40px;
+        }
+        .trois_up{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            section{
+                padding: 60px 30px 20px 0;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 60px;
+                h2{
+                    color: var(--accent-6);
+                }
+                .frame{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
         }
     }
     .hero_image_bottom{
@@ -534,6 +652,7 @@ main{
         flex-direction: column;
         text-align: center;
         gap: 40px;
+        border-top: 0.5px solid var(--divider-1);
         button{
             width: 100%;
             background-color: var(--accent-1);
@@ -549,6 +668,7 @@ footer{
     justify-content: center;    
     flex-direction: column;
     gap: 80px;
+    border-top: 1px solid var(--divider-1);
     .links{
         display: flex;
         flex-direction: column;
@@ -640,6 +760,7 @@ footer{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding-top: 5px;
             }
         }
     }
@@ -648,19 +769,13 @@ footer{
     /* header */
     /* #################### */
     header{
-        margin-top: 42px;
         padding: 0 16px;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        gap: 140px;
         h1{
-            font-family: var(--Crimson-text);
-            font-size: var(--fs-160);
-            font-weight: var(--fw-regular);
             text-align: center;
-            letter-spacing: var(--spacing-4-5);
-            line-height: var(--line-height-90);
-            margin: 42px 0 120px 0;
         }
         .hero_image{
             position: relative;
@@ -680,7 +795,7 @@ footer{
             .iphone{
                 background-color: var(--accent-4);
                 position: absolute;
-                background-image: url(img/Ipad\ _tablet.png);
+                background-image: url(img/Ipad_tablet.png);
                 background-repeat: no-repeat;
                 background-position: 50% 13.8px;
                 background-size: 645.76px 453.1px;
@@ -695,16 +810,44 @@ footer{
         }
     }
 
+    /* #################### */
+    /* Main */
+    /* #################### */
     main{
+        .logo_cloud{
+            padding: 50px 0;
+        }
         .benefits_section{
+            padding: 0 0 120px 0;
             .headline_and_icons{
                 .icons_module{
-                    .iconlockup{
+                    .icon_lockup{
                         width: 350px;
+                        height: 229px;
+                    }
+                    .icon_lockup_2{
+                        height: 225px;
                     }
                 }
             }
         }
+        .features_carousel{
+            padding: 0 0 120px 0;
+            gap: -12px;
+        }
+        .testimonial_section{
+            padding: 0 0 120px 0;
+        }
+        .centered_cta{
+            padding: 120px 100px;
+        }
+    }
+
+    /* #################### */
+    /* Footer */
+    /* #################### */
+    footer{
+        padding: 40px 0 20px 0;
     }
 }
 
@@ -725,6 +868,97 @@ footer{
     body{
         h1{
             line-height: var(--line-height-85); 
+        }
+    }
+    
+    /* #################### */
+    /* Header */
+    /* #################### */
+    header{
+        gap: 240px;
+        .hero_image{
+            height: 503px;
+            .iphone{
+                background-color: transparent;
+                background-image: url(img/Ipad.png);
+                background-size: 100%;
+                background-position: 50%;
+                width: 907px;
+                height: 644px;
+                top: -15px;
+            }
+        }
+    }
+
+    /* #################### */
+    /* Main */
+    /* #################### */
+    main{
+        .benefits_section{
+            .headline_and_icons{
+                .icons_module{
+                    .icon_lockup{
+                        width: 285px;
+                        height: 250px;
+                    }
+                    .icon_lockup_2{
+                        height: 225px;
+                    }
+                }
+            }
+        }
+        .features_carousel{
+            padding: 0 0 120px 0;
+            gap: 20px;
+            flex-direction: row;
+            .text{
+                padding: 60px 0 80px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                .title{
+                    p{
+                        margin: 40px 0;
+                    }
+                }
+                .list{
+                    .list_item{
+                        padding: 20px 0;
+                        display: flex;
+                        gap: 30px;
+                        border-top: 1px solid var(--divider-1);
+                        p:nth-child(2){
+                            color: var(--headline);
+                        }
+                    }
+                }
+            }
+            .features_carousel_v1{
+                img{
+                    width: 100%;
+                    object-fit: cover ;
+                    border-radius: 30px;
+                }
+            }
+        }
+        .testimonial_section{
+            gap: 20px;
+            flex-direction: row;
+            .quote{
+                width: 100%;
+                border: none;
+                padding: 0 0 0 50px;
+            }
+        }
+        .hero_image{
+            width: 100%;
+            height: 620px;
+            object-fit: cover;
+            object-position: 50% 50%;
+            border-radius: 30px;
+        }
+        .centered_cta{
+            padding: 120px 300px;
         }
     }
 }
